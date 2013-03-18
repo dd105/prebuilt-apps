@@ -22,7 +22,7 @@ using EmployeeDirectory.Data;
 namespace EmployeeDirectory.Android {
     [Application (Label = "Employees", Theme = "@style/CustomHoloTheme", Icon="@drawable/Icon")]
     public class Application : global::Android.App.Application {
-        private static IFavoritesRepository repo;
+        private static IFavoritesRepository<Person> repo;
 
         public Application (IntPtr javaReference, JniHandleOwnership transfer)
             :base(javaReference, transfer)
@@ -58,7 +58,7 @@ namespace EmployeeDirectory.Android {
         /// </summary>
         public static DateTime LastUseTime { get; set; }
 
-        public static IFavoritesRepository SharedFavoritesRepository
+        public static IFavoritesRepository<Person> SharedFavoritesRepository
         {
             get { return repo; }
         }

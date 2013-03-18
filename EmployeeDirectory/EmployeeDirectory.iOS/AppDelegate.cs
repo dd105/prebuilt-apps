@@ -45,10 +45,10 @@ namespace EmployeeDirectory.iOS
 			service = MemoryDirectoryService.FromCsv ("Data/XamarinDirectory.csv");
 
 			// LDAP service - uncomment to try it out.
-			//service = new LdapDirectoryService {
-			//	Host = "ldap.mit.edu",
-			//	SearchBase = "dc=mit,dc=edu",
-			//};
+//			service = new LdapDirectoryService {
+//				Host = "ldap.mit.edu",
+//				SearchBase = "dc=mit,dc=edu",
+//			};
 
 			//
 			// Load the favorites

@@ -18,13 +18,13 @@ using System.Collections.Generic;
 
 namespace EmployeeDirectory.Data
 {
-	public interface IFavoritesRepository
+	public interface IFavoritesRepository<T>
 	{
-		IEnumerable<Person> GetAll ();
-		Person FindById (string id);
-		bool IsFavorite (Person person);
-		void InsertOrUpdate (Person person);
-		void Delete (Person person);
+		IEnumerable<T> GetAll ();
+		T FindById (string id);
+		bool IsFavorite (T item);
+		void InsertOrUpdate (T item);
+		void Delete (T item);
 
 		event EventHandler Changed;
 	}

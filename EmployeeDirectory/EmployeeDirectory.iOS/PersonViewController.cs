@@ -32,7 +32,7 @@ namespace EmployeeDirectory.iOS
 
 		static readonly UIKitImageDownloader imageDownloader = new UIKitImageDownloader ();
 
-		public PersonViewController (Person person, IFavoritesRepository favoritesRepository)
+		public PersonViewController (Person person, IFavoritesRepository<Person> favoritesRepository)
 			: base (UITableViewStyle.Grouped)
 		{
 			personViewModel = new PersonViewModel (person, favoritesRepository);

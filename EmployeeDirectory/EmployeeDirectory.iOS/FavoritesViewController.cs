@@ -23,7 +23,7 @@ namespace EmployeeDirectory.iOS
 {
 	public class FavoritesViewController : UITableViewController
 	{
-		IFavoritesRepository favoritesRepository;
+		IFavoritesRepository<Person> favoritesRepository;
 		FavoritesViewModel viewModel;
 		SearchViewModel searchViewModel;
 
@@ -31,7 +31,7 @@ namespace EmployeeDirectory.iOS
 
 		UISearchDisplayController searchController;
 
-		public FavoritesViewController (IFavoritesRepository favoritesRepository, IDirectoryService service, Search savedSearch)
+		public FavoritesViewController (IFavoritesRepository<Person> favoritesRepository, IDirectoryService service, Search savedSearch)
 		{
 			this.favoritesRepository = favoritesRepository;
 

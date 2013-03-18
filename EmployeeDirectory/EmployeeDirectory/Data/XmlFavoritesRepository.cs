@@ -24,7 +24,7 @@ using System.Xml;
 namespace EmployeeDirectory.Data
 {
 	[XmlRoot ("Favorites")]
-	public class XmlFavoritesRepository : IFavoritesRepository
+	public class XmlFavoritesRepository : IFavoritesRepository<Person>
 	{
 		public string IsolatedStorageName { get; set; }
 

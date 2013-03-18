@@ -23,9 +23,9 @@ namespace EmployeeDirectory.ViewModels
 {
 	public class PersonViewModel : ViewModelBase
 	{
-		readonly IFavoritesRepository favoritesRepository;
+		readonly IFavoritesRepository<Person> favoritesRepository;
 
-		public PersonViewModel (Person person, IFavoritesRepository favoritesRepository)
+		public PersonViewModel (Person person, IFavoritesRepository<Person> favoritesRepository)
 		{
 			if (person == null) {
 				throw new ArgumentNullException ("person");

@@ -21,12 +21,12 @@ namespace EmployeeDirectory.ViewModels
 {
 	public class FavoritesViewModel : ViewModelBase
 	{
-		IFavoritesRepository favoritesRepository;
+		IFavoritesRepository<Person> favoritesRepository;
 		bool groupByLastName;
 
 		public ObservableCollection<PeopleGroup> Groups { get; private set; }
 
-		public FavoritesViewModel (IFavoritesRepository favoritesRepository, bool groupByLastName)
+		public FavoritesViewModel (IFavoritesRepository<Person> favoritesRepository, bool groupByLastName)
 		{
 			if (favoritesRepository == null) {
 				throw new ArgumentNullException ("favoritesRepository");
